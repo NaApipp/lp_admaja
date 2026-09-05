@@ -4,11 +4,11 @@ import { Star } from "lucide-react";
 
 export default function Footer() {
   const navLinks = [
-    { name: "Tentang Paskibra Admaja", href: "#tentang" },
-    { name: "Susunan Pembina & Pengurus", href: "#pengurus" },
-    { name: "Visi & Misi", href: "#visi-misi" },
-    { name: "Galeri Dokumentasi", href: "#galeri" },
-    { name: "Pertanyaan Umum (FAQ)", href: "#faq" },
+    { name: "Tentang Paskibra Admaja", href: "/beranda#tentang" },
+    { name: "Susunan Pembina & Pengurus", href: "/beranda#pengurus" },
+    { name: "Visi & Misi", href: "/beranda#visi-misi" },
+    { name: "Galeri Dokumentasi", href: "/beranda#galeri" },
+    { name: "Pertanyaan Umum (FAQ)", href: "/beranda#faq" },
   ];
 
   return (

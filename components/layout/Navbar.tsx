@@ -69,44 +69,31 @@ export default function Navbar() {
   const menuItems = [
     {
       name: "Tentang",
-      href: "#tentang",
+      href: "/beranda#tentang",
     },
     {
       name: "Pengurus & Pembina",
-      href: "#pengurus",
+      href: "/beranda#pengurus",
     },
     {
       name: "Visi Misi",
-      href: "#visi-misi",
+      href: "/beranda#visi-misi",
     },
     {
       name: "Galeri Kegiatan",
-      href: "#galeri",
+      href: "/beranda#galeri",
     },
     {
       name: "FAQ",
-      href: "#faq",
+      href: "/beranda#faq",
     },
     {
       name: "kontak",
-      href: "#kontak",
+      href: "/beranda#kontak",
     },
   ];
 
-  const handleLogout = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoggingOut(true);
-    try {
-      await fetch("/api/auth/logout", {
-        method: "POST",
-      });
-    } catch (error) {
-      console.error("Logout error:", error);
-    } finally {
-      sessionStorage.removeItem("user");
-      router.push("/login");
-    }
-  };
+
 
   return (
     <>
@@ -114,7 +101,7 @@ export default function Navbar() {
         <div className="flex h-full max-w-7xl mx-auto items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo & Brand */}
           <Link
-            href="/general"
+            href="/beranda"
             className="flex items-center gap-2.5 focus:outline-none shrink-0"
           >
             <Image

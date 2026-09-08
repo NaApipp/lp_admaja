@@ -75,10 +75,10 @@ export default function Navbar() {
       name: "Pengurus & Pembina",
       href: "/beranda#pengurus",
     },
-    {
-      name: "Visi Misi",
-      href: "/beranda#visi-misi",
-    },
+    // {
+    //   name: "Visi Misi",
+    //   href: "/beranda#visi-misi",
+    // },
     {
       name: "Galeri Kegiatan",
       href: "/beranda#galeri",

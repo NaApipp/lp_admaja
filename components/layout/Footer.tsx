@@ -1,12 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Star } from "lucide-react";
 
 export default function Footer() {
   const navLinks = [
     { name: "Tentang Paskibra Admaja", href: "/beranda#tentang" },
     { name: "Susunan Pembina & Pengurus", href: "/beranda#pengurus" },
-    { name: "Visi & Misi", href: "/beranda#visi-misi" },
     { name: "Galeri Dokumentasi", href: "/beranda#galeri" },
     { name: "Pertanyaan Umum (FAQ)", href: "/beranda#faq" },
   ];
@@ -28,7 +26,7 @@ export default function Footer() {
               />
               <div className="flex flex-col">
                 <span className="text-xl font-bold font-oswald text-white tracking-wider leading-tight">
-                  ADMAJA
+                  Adika Mahdi Jaya
                 </span>
                 <span className="text-xs font-plus-jakarta-sans text-[#94A3B8]">
                   Paskibra SMK Negeri 4 Kendal
@@ -38,7 +36,7 @@ export default function Footer() {
 
             <p className="text-sm font-plus-jakarta-sans text-[#94A3B8] leading-relaxed max-w-sm">
               Organisasi kepemudaan ekstrakurikuler yang berkomitmen mencetak
-              taruna-taruni berwatak ksatria, bermental baja, dan berjiwa merah
+              siswa-siswi berwatak ksatria, bermental baja, dan berjiwa merah
               putih yang siap mengharumkan almamater.
             </p>
 
@@ -80,7 +78,8 @@ export default function Footer() {
             <div className="space-y-2 text-sm font-plus-jakarta-sans text-[#94A3B8] leading-relaxed">
               <p className="text-slate-300 font-medium">SMK Negeri 4 Kendal</p>
               <p>
-                Jl. Soekarno-Hatta, Brangsong Utara, Brangsong, Kec. Brangsong, Kabupaten Kendal, Jawa Tengah 51318
+                Jl. Soekarno-Hatta, Brangsong Utara, Brangsong, Kec. Brangsong,
+                Kabupaten Kendal, Jawa Tengah 51318
               </p>
               <p>
                 Website Sekolah:{" "}
@@ -127,9 +126,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-plus-jakarta-sans text-slate-500 text-center sm:text-left">
-          <p>
-            © 2026 Admaja. All rights reserved.
-          </p>
+          <p>© 2026 Admaja. All rights reserved.</p>
           <p>Dibina di bawah naungan Kesiswaan SMKN 4 Kendal</p>
         </div>
       </div>

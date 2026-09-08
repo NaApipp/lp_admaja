@@ -1,6 +1,6 @@
 # Design System & Technical Specifications: Landing Page Paskibra ADMAJA (SMKN 4 Kendal)
 
-Dokumen `design.md` ini dirancang khusus untuk memandu AI Coding Assistant (seperti Cursor, Claude Dev, GitHub Copilot, v0, dll.) dalam mengimplementasikan Landing Page Ekstrakurikuler Paskibra Adhika Mahol Jaya (ADMAJA) SMKN 4 Kendal dengan presisi visual, struktur komponen modular, dan aksesibilitas tinggi.
+Dokumen `design.md` ini dirancang khusus untuk memandu AI Coding Assistant (seperti Cursor, Claude Dev, GitHub Copilot, v0, dll.) dalam mengimplementasikan Landing Page Ekstrakurikuler Paskibra Adika Mahol Jaya (ADMAJA) SMKN 4 Kendal dengan presisi visual, struktur komponen modular, dan aksesibilitas tinggi.
 
 ---
 
@@ -117,7 +117,7 @@ LandingPage Layout
 
 - **Left Column**:
   - Badge / Eyebrow text: `Ekstrakurikuler Paskibra`
-  - Heading (H1): `Adhika Mahol Jaya`
+  - Heading (H1): `Adika Mahol Jaya`
   - Subtitle: Deskripsi singkat visi dan semangat kedisiplinan Paskibra SMKN 4 Kendal.
   - Action Buttons: `Daftar Sekarang` (Primary Red Button) & Link sekunder.
 - **Right Column**:

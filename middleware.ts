@@ -14,8 +14,8 @@ const EXCLUDED_PATHS = [
 
 // 🔧 Toggle maintenance mode langsung dari file ini.
 // Ubah nilai di bawah menjadi `true` jika sedang maintenance, dan `false` jika normal.
-const isMaintenanceMode = true;
-// const isMaintenanceMode = false;
+// const isMaintenanceMode = true;
+const isMaintenanceMode = false;
 
 export function middleware(request: NextRequest) {
   // 1. Kalau maintenance mode MATI, biarkan user mengakses apa saja.

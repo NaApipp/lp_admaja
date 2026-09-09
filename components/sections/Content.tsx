@@ -10,7 +10,7 @@ import { X, ZoomIn } from "lucide-react";
  * Saat ini diset `false` untuk menggunakan DATA DUMMY sesuai permintaan.
  * Ubah menjadi `true` jika ingin langsung mengambil data dari API /api/content.
  */
-const USE_API = false;
+const USE_API = true;
 
 // Data dummy sesuai dengan desain visual Galeri Kegiatan & Jejak Prestasi
 const DUMMY_POSTS: ContentPost[] = [
@@ -173,12 +173,10 @@ export default function Content() {
                   className="group relative aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden bg-slate-900 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                 >
                   {/* Image 4:3 Horizontal */}
-                  <Image
+                  <img
                     src={post.image || "/images/gallery/upacara-bendera.jpg"}
                     alt={post.title}
-                    fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
-                    priority={index < 2}
                     className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
                   />
 

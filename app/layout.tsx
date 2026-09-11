@@ -59,9 +59,9 @@ export const metadata: Metadata = {
     siteName: "Paskibra ADMAJA SMKN 4 Kendal",
     images: [
       {
-        url: "/logo-v2.png",
-        width: 800,
-        height: 800,
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "Logo Resmi Paskibra ADMAJA SMKN 4 Kendal",
       },
     ],
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Paskibra ADMAJA SMKN 4 Kendal | Adika Mahdi Jaya",
     description:
       "Website resmi Paskibra ADMAJA (Adika Mahdi Jaya) SMKN 4 Kendal. Membentuk siswa-siswi berwatak ksatria dan berjiwa Merah Putih.",
-    images: ["/logo-v2.png"],
+    images: ["/og-image.png"],
   },
 };
 

@@ -14,6 +14,8 @@ export interface ContentPost {
   content: string;
   label: string;
   image: string;
+  times?: ContentTimes;
+  relation?: ContentRelation;
 }
 
 

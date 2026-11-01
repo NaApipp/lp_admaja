@@ -36,3 +36,7 @@ body {
 .bg-main {
   background-color: var(--main-color);
 }
+
+html {
+  scroll-behavior: smooth;
+}

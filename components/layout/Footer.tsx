@@ -46,7 +46,7 @@ export default function Footer() {
               text-[#020617] font-semibold font-plus-jakarta-sans text-xs shadow-xs"
               >
                 {/* <Star className="w-3.5 h-3.5 fill-slate-950 text-slate-950" /> */}
-                <span>&quot;SEMBOYAN&quot;</span>
+                <span>&quot;Pemimpin yang terbaik dan selalu di depan.&quot;</span>
               </div>
             </div>
           </div>

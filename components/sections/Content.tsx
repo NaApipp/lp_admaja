@@ -329,7 +329,7 @@ export default function Content() {
               6 Kegiatan terbaru Paskibra Adika Mahdi Jaya
             </p>
             <a
-              href="#"
+              href="/gallery"
               className="hidden md:hidden inline-flex items-center gap-1.5 text-sm font-semibold font-plus-jakarta-sans text-[#C8102E] hover:text-[#A00C23] transition-colors whitespace-nowrap group/btn"
             >
               Lihat Semua

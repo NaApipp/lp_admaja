@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ContentPost, ContentResponse } from "@/app/types/content";
 import { CalendarDays, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 /**
  * Konfigurasi Sumber Data:
@@ -22,7 +23,10 @@ const DUMMY_POSTS: ContentPost[] = [
       "Taruna ADMAJA SMKN 4 Kendal bertugas sebagai pasukan pengibar bendera pusaka di tingkat kecamatan dan kabupaten dengan sempurna.",
     label: "PENUGASAN UPACARA RESMI",
     image: "/images/gallery/upacara-bendera.jpg",
-    times: { createdAt: "2026-09-01T07:00:00.000Z", updatedAt: "2026-09-01T07:00:00.000Z" },
+    times: {
+      createdAt: "2026-09-01T07:00:00.000Z",
+      updatedAt: "2026-09-01T07:00:00.000Z",
+    },
   },
   {
     _id: "2",
@@ -32,25 +36,36 @@ const DUMMY_POSTS: ContentPost[] = [
       "Membawa pulang piala Juara 1 Umum, Best Danton, serta Formasi Variasi Terfavorit.",
     label: "JUARA LKBB PELAJAR",
     image: "/images/gallery/juara-lkbb.jpg",
-    times: { createdAt: "2026-09-05T07:00:00.000Z", updatedAt: "2026-09-05T07:00:00.000Z" },
+    times: {
+      createdAt: "2026-09-05T07:00:00.000Z",
+      updatedAt: "2026-09-05T07:00:00.000Z",
+    },
   },
   {
     _id: "3",
     content_id: "latihan-rutin",
     title: "Latihan Rutin PBB & Pembentukan Karakter",
-    content: "Dilaksanakan setiap Selasa & Jumat sore di Lapangan SMKN 4 Kendal.",
+    content:
+      "Dilaksanakan setiap Selasa & Jumat sore di Lapangan SMKN 4 Kendal.",
     label: "LATIHAN RUTIN",
     image: "/images/gallery/latihan-pbb.jpg",
-    times: { createdAt: "2026-09-10T07:00:00.000Z", updatedAt: "2026-09-10T07:00:00.000Z" },
+    times: {
+      createdAt: "2026-09-10T07:00:00.000Z",
+      updatedAt: "2026-09-10T07:00:00.000Z",
+    },
   },
   {
     _id: "4",
     content_id: "kreasi-seni-pasukan",
     title: "Gelar Formasi Variasi Musik & Kekompakan",
-    content: "Paduan gerakan tegas berirama musik patriotik yang menggetarkan penonton.",
+    content:
+      "Paduan gerakan tegas berirama musik patriotik yang menggetarkan penonton.",
     label: "KREASI SENI PASUKAN",
     image: "/images/gallery/formasi-variasi.jpg",
-    times: { createdAt: "2026-09-15T07:00:00.000Z", updatedAt: "2026-09-15T07:00:00.000Z" },
+    times: {
+      createdAt: "2026-09-15T07:00:00.000Z",
+      updatedAt: "2026-09-15T07:00:00.000Z",
+    },
   },
   {
     _id: "5",
@@ -60,7 +75,10 @@ const DUMMY_POSTS: ContentPost[] = [
       "Prosesi pelantikan resmi anggota baru yang mengukuhkan mereka sebagai bagian dari keluarga besar ADMAJA.",
     label: "TRADISI",
     image: "/images/gallery/upacara-bendera.jpg",
-    times: { createdAt: "2026-09-20T07:00:00.000Z", updatedAt: "2026-09-20T07:00:00.000Z" },
+    times: {
+      createdAt: "2026-09-20T07:00:00.000Z",
+      updatedAt: "2026-09-20T07:00:00.000Z",
+    },
   },
   {
     _id: "6",
@@ -70,26 +88,53 @@ const DUMMY_POSTS: ContentPost[] = [
       "Sesi kolaborasi bersama paskibra dari sekolah lain untuk meningkatkan kualitas baris-berbaris.",
     label: "LATIHAN GABUNGAN",
     image: "/images/gallery/latihan-pbb.jpg",
-    times: { createdAt: "2026-09-25T07:00:00.000Z", updatedAt: "2026-09-25T07:00:00.000Z" },
+    times: {
+      createdAt: "2026-09-25T07:00:00.000Z",
+      updatedAt: "2026-09-25T07:00:00.000Z",
+    },
   },
 ];
 
 // Helper warna badge
 function getBadgeStyle(label: string): string {
   const upper = (label || "").toUpperCase();
-  if (upper.includes("JUARA") || upper.includes("LKBB") || upper.includes("PRESTASI")) {
-    return "bg-[#EAB308] text-slate-950 font-bold";
+   // Berita → biru
+  if (upper.includes("BERITA")) {
+    return "bg-blue-100 text-blue-700 font-bold";
   }
-  if (upper.includes("LATIHAN") || upper.includes("RUTIN") || upper.includes("GABUNGAN")) {
-    return "bg-[#D97706] text-white font-bold";
+
+  // Kegiatan → hijau
+  if (upper.includes("KEGIATAN")) {
+    return "bg-green-100 text-green-700 font-bold";
   }
-  if (upper.includes("KREASI") || upper.includes("SENI") || upper.includes("VARIASI")) {
-    return "bg-[#CA8A04] text-white font-bold";
+
+  // Pengumuman → oranye
+  if (upper.includes("PENGUMUMAN")) {
+    return "bg-orange-100 text-orange-700 font-bold";
   }
-  if (upper.includes("TRADISI") || upper.includes("PELANTIKAN")) {
-    return "bg-[#7C3AED] text-white font-bold";
+
+  // Prestasi → kuning
+  if (upper.includes("PRESTASI")) {
+    return "bg-yellow-100 text-yellow-800 font-bold";
   }
-  return "bg-[#C8102E] text-white font-bold";
+
+  // Edukasi → ungu
+  if (upper.includes("EDUKASI")) {
+    return "bg-purple-100 text-purple-700 font-bold";
+  }
+
+  // Dokumentasi → cyan
+  if (upper.includes("DOKUMENTASI")) {
+    return "bg-cyan-100 text-cyan-700 font-bold";
+  }
+
+  // Latihan Rutin → merah
+  if (upper.includes("LATIHAN RUTIN")) {
+    return "bg-red-100 text-red-700 font-bold";
+  }
+
+  // Lainnya → abu-abu
+  return "bg-gray-100 text-gray-700 font-bold";
 }
 
 // Format tanggal Indonesia
@@ -106,8 +151,12 @@ function formatDate(dateStr?: string): string {
 function getLatestPosts(posts: ContentPost[], limit = 6): ContentPost[] {
   return [...posts]
     .sort((a, b) => {
-      const dateA = a.times?.createdAt ? new Date(a.times.createdAt).getTime() : 0;
-      const dateB = b.times?.createdAt ? new Date(b.times.createdAt).getTime() : 0;
+      const dateA = a.times?.createdAt
+        ? new Date(a.times.createdAt).getTime()
+        : 0;
+      const dateB = b.times?.createdAt
+        ? new Date(b.times.createdAt).getTime()
+        : 0;
       return dateB - dateA;
     })
     .slice(0, limit);
@@ -227,13 +276,21 @@ export default function Content() {
         if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
 
         const json: ContentResponse = await res.json();
-        if (isMounted && json && Array.isArray(json.data) && json.data.length > 0) {
+        if (
+          isMounted &&
+          json &&
+          Array.isArray(json.data) &&
+          json.data.length > 0
+        ) {
           setAllPosts(json.data);
         } else if (isMounted) {
           setAllPosts(DUMMY_POSTS);
         }
       } catch (err) {
-        console.warn("Gagal memuat data dari /api/content, beralih ke data dummy:", err);
+        console.warn(
+          "Gagal memuat data dari /api/content, beralih ke data dummy:",
+          err,
+        );
         if (isMounted) setAllPosts(DUMMY_POSTS);
       } finally {
         if (isMounted) setLoading(false);
@@ -298,7 +355,9 @@ export default function Content() {
           /* Empty State */
           <div className="flex flex-col items-center justify-center py-24 text-slate-400">
             <CalendarDays className="w-12 h-12 mb-4 opacity-40" />
-            <p className="font-plus-jakarta-sans text-base">Belum ada konten tersedia.</p>
+            <p className="font-plus-jakarta-sans text-base">
+              Belum ada konten tersedia.
+            </p>
           </div>
         ) : (
           <div className="space-y-5 lg:space-y-6">
@@ -330,7 +389,14 @@ export default function Content() {
           </div>
         )}
       </div>
+      <div className="flex justify-center mt-7">
+        <Link
+          href="/gallery"
+          className="group flex items-center gap-2 rounded-xl px-6 py-3 text-l font-bold border-2 border-[#c8102e] text-black hover:text-white hover:bg-[#c8102e] active:scale-[0.98] transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+        >
+          <span>Lihat Selengkapnya</span>
+        </Link>
+      </div>
     </section>
   );
 }
-

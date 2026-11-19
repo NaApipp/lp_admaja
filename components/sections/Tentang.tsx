@@ -1,4 +1,5 @@
 import { Shield, BookOpen, Flame, History } from "lucide-react";
+import CarouselKomsat from "../layout/Carousel";
 
 export default function Tentang() {
   const pancaBakti = [
@@ -169,6 +170,8 @@ export default function Tentang() {
             </div>
           </div>
         </div>
+        
+        <CarouselKomsat />
       </div>
     </section>
   );

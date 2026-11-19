@@ -180,7 +180,7 @@ export default function CarouselKomsat() {
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                   <span>Masa Bakti</span>
                   <span className="font-bold text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-md">
-                    Gen {item.angkatan}
+                    Angkatan {item.angkatan}
                   </span>
                 </div>
               </div>

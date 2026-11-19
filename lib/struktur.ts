@@ -1,3 +1,5 @@
+import { title } from "process";
+
 const leadership = [
     {
       name: "Arif Ediyanto, S.Pd., M.Pd.",
@@ -31,57 +33,73 @@ const leadership = [
       badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
       image: ""
     },
+    {
+      role: "Komandan Satuan",
+      title: "Pimpinan Organisasi",
+      name: "Fahresya Khoerul Imam (XI TKJ 1)",
+      badge: "bg-red-50 text-[#B91C1C] border-red-200",
+      desc: "Mewujudkan Paskibra adika mahdi jaya yang berintegritas, berprestasi, dan solid dengan berlandaskan kedisiplinan, kekeluargaan, serta rasa tanggung jawab yang tinggi",
+      image: "/struktur/struktur-1.jpg"
+    },
   ];
 
   const pengurus = [
-    {
-      role: "Komandan Satuan",
-      name: "Coming Soon",
-      class: "Taruna / Taruni ADMAJA",
-      badge: "bg-red-50 text-[#B91C1C] border-red-200",
-      desc: "Bertanggung jawab memimpin seluruh agenda, komando perbarisan, dan koordinasi internal anggota.",
-    },
+    
     {
       role: "Wakil Komandan Satuan 1",
-      name: "Coming Soon",
-      class: "Taruna / Taruni ADMAJA",
+      name: "Muhammad Rafa Arfiansyah",
+      class: "X TJKT 1",
       badge: "bg-blue-50 text-blue-700 border-blue-200",
       desc: "Mendampingi kepemimpinan ketua, mengawasi operasional harian latihan, dan kedisiplinan siswa siswi ADMAJA.",
     },
     {
       role: "Wakil Komandan Satuan 2",
-      name: "Coming Soon",
-      class: "Taruna / Taruni ADMAJA",
+      name: "Muhammad Hafizh Kurniawan",
+      class: "X TJKT 2",
       badge: "bg-amber-50 text-amber-700 border-amber-200",
       desc: "Mengawasi operasional harian latihan, dan kedisiplinan siswa siswi ADMAJA.",
     },
     {
       role: "Sekretaris 1",
-      name: "Coming Soon",
-      class: "Taruna / Taruni ADMAJA",
+      name: "Tyas Wiji Anjeli",
+      class: "X RPL 1",
       badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
       desc: "Mengatur administrasi, keorganisasian, penyusunan proposal, dan persuratan resmi organisasi.",
     },
     {
       role: "Sekretaris 2",
-      name: "Coming Soon",
-      class: "Taruna / Taruni ADMAJA",
+      name: "Novriza Hafidz",
+      class: "X TJKT 2",
       badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
       desc: "Mendampingi sekretaris 1 dalam pengelolaan dokumen, rekapitulasi presensi, dan arsip kegiatan.",
     },
     {
       role: "Bendahara 1",
-      name: "Coming Soon",
-      class: "Taruna / Taruni ADMAJA",
+      name: "Izza Oktafia",
+      class: "XI KULINER 2",
       badge: "bg-purple-50 text-purple-700 border-purple-200",
       desc: "Mengatur sirkulasi keuangan kas organisasi, pendanaan perlengkapan dinas seragam, dan logistik lomba.",
     },
     {
       role: "Bendahara 2",
-      name: "Coming Soon",
-      class: "Taruna / Taruni ADMAJA",
+      name: "Lydiawati Aslina",
+      class: "X PPLG 3",
       badge: "bg-purple-50 text-purple-700 border-purple-200",
       desc: "Mendampingi bendahara 1 dalam pencatatan keuangan harian, iuran latihan, dan pembukuan kas.",
+    },
+    {
+      role: "Provost 1",
+      name: "Tania Putri Dewi",
+      class: "XI APAT 2",
+      badge: "bg-red-50 text-[#B91C1C] border-red-200",
+      desc: "Bertindak sebagai Juru Adat utama dalam menegakkan tata tertib, memelihara norma tradisi adat, serta mengawasi kedisiplinan dan kode etik anggota ADMAJA.",
+    },
+    {
+      role: "Provost 2",
+      name: "Akbar Zulfajri",
+      class: "X TO 2",
+      badge: "bg-red-50 text-[#B91C1C] border-red-200",
+      desc: "Mendampingi Provost 1 sebagai Juru Adat dalam pengawasan kedisiplinan harian, penegakan tata tertib latihan, dan menjaga tradisi adat organisasi.",
     },
   ];
 

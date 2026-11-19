@@ -60,6 +60,23 @@ function formatDate(dateStr?: string): string {
   }
 }
 
+// Urutkan data dari yang paling terbaru berdasarkan tanggal pembuatan (createdAt)
+function sortByLatest(items: ContentPost[]): ContentPost[] {
+  return [...items].sort((a, b) => {
+    const getTime = (post: ContentPost): number => {
+      const dateStr =
+        post.times?.createdAt ||
+        (post as any).createdAt ||
+        post.times?.updatedAt ||
+        (post as any).updatedAt;
+      if (!dateStr) return 0;
+      const t = new Date(dateStr).getTime();
+      return isNaN(t) ? 0 : t;
+    };
+    return getTime(b) - getTime(a);
+  });
+}
+
 // Skeleton Card saat loading
 function SkeletonCard() {
   return (
@@ -91,9 +108,9 @@ export default function GallerySection() {
 
       const json: ContentResponse = await res.json();
       if (Array.isArray(json.data)) {
-        setPosts(json.data);
+        setPosts(sortByLatest(json.data));
       } else if (Array.isArray(json)) {
-        setPosts(json as unknown as ContentPost[]);
+        setPosts(sortByLatest(json as unknown as ContentPost[]));
       } else {
         setPosts([]);
       }

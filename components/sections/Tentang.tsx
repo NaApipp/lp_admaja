@@ -171,7 +171,7 @@ export default function Tentang() {
           </div>
         </div>
         
-        {/* <CarouselKomsat /> */}
+        <CarouselKomsat />
       </div>
     </section>
   );
